@@ -171,6 +171,20 @@ function myVisible() {
   });
 }
 
+function imgLamp() {
+  var bt7 = document.getElementById("myLamp");
+  bt7.addEventListener("click", function () {
+    document.getElementById("imgLamp").src = "LampRedBlue.jpg";
+  });
+}
+
+function imgLamp2() {
+  var bt6 = document.getElementById("myLamp2");
+  bt6.addEventListener("click", function () {
+    document.getElementById("imgLamp").src = "LampYellowGreen.jpg";
+  });
+}
+
 function finish() {
   myHidden();
   myVisible();
@@ -178,21 +192,11 @@ function finish() {
   myHello2();
   myHelloStyle2();
   myHelloStyle();
+  imgLamp();
+  imgLamp2();
 }
 
-window.onload = finish; // Функции ниже НЕ РАБОТАЮТ
-//function myLamp() {  
-// document.getElementById("imgLamp").src = "./img/LampBleuRed.jpg";
-// }
-// function myLamp2() {  
-// document.getElementById("imgLamp").src = "./img/LampYellowGreen.jpg";
-// }
-//function imgR() {
-//var bt7 = document.getElementById("myLamp"); 
-//var imgf = document.getElementById("imgLamp");  
-//imgf.src = new URL('./img/LampBleuRed.jpg', import.meta.url);
-//bt7.addEventListener("click", () => {document.getElementById('imgLamp').innerHTML);
-// }
+window.onload = finish;
 },{}],"C:/Users/37533/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -221,7 +225,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "55199" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "62587" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

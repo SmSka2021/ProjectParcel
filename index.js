@@ -46,6 +46,16 @@ function myVisible() {
  var btt2 = document.getElementById("bt2");
  btt2.addEventListener("click", () => {document.getElementById("imgVisibility").style.visibility = "visible";});
 }
+
+function imgLamp() {
+  var bt7 = document.getElementById("myLamp");   
+  bt7.addEventListener("click", () => {document.getElementById("imgLamp").src = "LampRedBlue.jpg"});
+ }
+
+ function imgLamp2() {
+  var bt6 = document.getElementById("myLamp2");   
+  bt6.addEventListener("click", () => {document.getElementById("imgLamp").src = "LampYellowGreen.jpg"});
+ }
  function finish() {
    myHidden();
    myVisible();   
@@ -53,24 +63,12 @@ function myVisible() {
    myHello2();   
    myHelloStyle2();
    myHelloStyle(); 
-      
+   imgLamp();
+   imgLamp2();
  }
  window.onload =  finish;
 
- // Функции ниже НЕ РАБОТАЮТ
-
- //function myLamp() {  
-  // document.getElementById("imgLamp").src = "./img/LampBleuRed.jpg";
-  // }
-  // function myLamp2() {  
-  // document.getElementById("imgLamp").src = "./img/LampYellowGreen.jpg";
-  // }
-  
- //function imgR() {
- //var bt7 = document.getElementById("myLamp"); 
- //var imgf = document.getElementById("imgLamp");  
- //imgf.src = new URL('./img/LampBleuRed.jpg', import.meta.url);
- //bt7.addEventListener("click", () => {document.getElementById('imgLamp').innerHTML);
-// }
+ 
+ 
  
  
