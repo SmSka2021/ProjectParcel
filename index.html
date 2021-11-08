@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.scss">
+  <title>JS HTML DOM</title>
+  <link rel="icon" type="image" href="./img/icon.png">
+ <script>
+   setInterval(myFunction, 1000);
+function myFunction() {
+let d = new Date();
+document.getElementById("myTime").innerHTML=
+d.getHours() + ":" +
+d.getMinutes() + ":" +
+d.getSeconds();
+}
+function myAnimation() {
+let elem = document.getElementById("animate");
+let pos = 55;
+let id = setInterval(frame, 5);
+function frame() {
+ if (pos == 350) {
+ clearInterval(id);
+ } else {
+ pos++;
+  elem.style.top = pos + 'px';
+  elem.style.left = pos + 'px';       
+}
+}
+}
+</script>
+</head>
+<body>
+  <header>
+    <img src="./img/logoJS_1.png" alt="Image of the day">
+    <h1 id="demo">JavaScript HTML DOM</h1>
+  </header>
+  <main>
+    <div class="container">
+      <div class="row row-cols-3">
+        <div class="col">
+          <div class="card mb-3 bordur height-card" style="max-width: 540px;">
+            <div class="row g-0">
+              <div class="col-md-4">
+                <img class="imgHello" src="./img/hello.jpg" alt="imgHello">
+                <h4 class="writeHi" id="hello">HELLO</h4>
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h3 class="card-title">Меняем <br> Текст</h3>
+                  <button class="btn btn-primary btn-top" id="myHello" type="button">Нажми</button><br>
+                  <button class="btn btn-primary btn-bottom" id="myHello2" type="button">Нажми</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card mb-3 bordur" style="max-width: 540px;">
+            <div class="row g-0">
+              <div class="col-md-4">
+                <img src="./img/lampYellow.jpg" id="imgLamp" alt="lampYellow">
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h3 class="card-title">Меняем <br> Рисунок</h3>
+                  <button class="btn btn-primary correctButton btn-top" id="myLamp" type="button">Нажми</button><br>
+                  <button class="btn btn-primary correctButton" id="myLamp2" type="button">Нажми</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="fon_time bordur">
+            <h3 class="card-title">Выводим дату<br>на экран</h3>
+            <h2 class="myDay"></h2>
+            <h2 id="myTime"></h2>
+          </div>
+        </div>
+        <div class="col">
+          <div id="container" class="fon_time bordur">
+            <h3 class="card-title">Анимация <br>объекта</h3>
+            <div id="animate"></div>
+            <button class="btn btn-primary" onclick="myAnimation()" type="button">Нажми</button>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card mb-3 bordur topHeit correctWidth" style="max-width: 540px;">
+            <div class="row g-0">
+              <div class="col-md-4">
+                <img src="./img/town.jpg"  alt="fotoCity">
+                <img src="./img/MenHidden.png" class="correktMen" id="imgVisibility" alt="fotoMen">
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h3 class="card-title">Невидимый <br> Элемент</h3>
+                  <button class="btn btn-primary correctButton" id="bt1" type="button">Нажми</button><br>
+                  <button class="btn btn-primary correctButton" id="bt2" type="button">Нажми</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card mb-3 bordur topHeit correctHeight" style="max-width: 540px;">
+            <div class="row g-0">
+              <div class="col-md-4">
+                <img class="imgHello" src="./img/hello.jpg" alt="imgHello">
+                <h4 class="writeHi" id="helloStyle">HELLO</h4>
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h3 class="card-title">Меняем <br> Стиль</h3>
+                  <button class="btn btn-primary" id="myHelloStyle" type="button">Нажми</button><br>
+                  <button class="btn btn-primary btn-bottom" id="myHelloStyle2" type="button">Нажми</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer>
+    <h5> Контакты для связи c автором проекта: </h5>
+    <a href="https://www.facebook.com/svetlana.matskevich" target="_blank"><img src="./img/fb_icon (1).png"
+        alt="iconFasebook"> </a>
+    <a href="https://vk.com/id176383084" target="_blank"><img src="./img/vk-logo_icon.png" alt="vk"></a>
+    <a href="mailto: Sve-Mac@yandex.ru" target="_blank"><img src="./img/email.png" alt="email"></a>
+  </footer>
+  <script src="./index.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous">
+  </script>
+</body>
+</html>
